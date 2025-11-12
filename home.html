@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gardening Tips</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background-color: #e8f5e9;
+    }
+    header {
+      background-color: #2e7d32;
+    }
+    header a.nav-link {
+      color: #fff !important;
+    }
+    .hero {
+      text-align: center;
+      padding: 50px 0;
+    }
+    .hero img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    h1 {
+      color: #2e7d32;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .articles-section {
+      padding: 40px 0;
+    }
+    .article-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 15px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .article-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+    .article-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    .article-content {
+      margin-left: 15px;
+    }
+    .article-content h5 {
+      color: #2e7d32;
+      font-weight: 600;
+    }
+    .btn-read {
+      background-color: #2e7d32;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 15px;
+    }
+    .btn-read:hover {
+      background-color: #256528;
+    }
+    footer {
+      background-color: #2e7d32;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="text-white fw-bold fs-4">LOGO</div>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>GARDENING TIPS</h1>
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Plant" />
+    </div>
+  </section>
+
+  <!-- Articles Section -->
+  <section class="articles-section">
+    <div class="container">
+      <h4 class="text-center text-success fw-bold mb-4">LATEST ARTICLES</h4>
+
+      <!-- Article 1 -->
+      <div class="article-card d-flex align-items-center">
+        <img src="https://images.unsplash.com/photo-1598284786820-3b7c114b8f1a" alt="Vegetable Garden" />
+        <div class="article-content">
+          <h5>How to Start a Vegetable Garden</h5>
+          <p>Learn how to prepare your soil, choose the right plants, and grow your own fresh produce at home.</p>
+          <button class="btn-read" data-article="1">Read More</button>
+        </div>
+      </div>
+
+      <!-- Article 2 -->
+      <div class="article-card d-flex align-items-center">
+        <img src="https://images.unsplash.com/photo-1585325701954-1b2d70b37f9d" alt="Herbs" />
+        <div class="article-content">
+          <h5>Tips for Growing Herbs</h5>
+          <p>Discover the secrets of growing aromatic herbs like basil, mint, and rosemary in your garden or balcony.</p>
+          <button class="btn-read" data-article="2">Read More</button>
+        </div>
+      </div>
+
+      <!-- Article 3 -->
+      <div class="article-card d-flex align-items-center">
+        <img src="https://images.unsplash.com/photo-1599407459300-74edb9b93a6d" alt="Pest Control" />
+        <div class="article-content">
+          <h5>Organic Pest Control</h5>
+          <p>Keep your plants healthy with eco-friendly pest control techniques that avoid harsh chemicals.</p>
+          <button class="btn-read" data-article="3">Read More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="articleModal" tabindex="-1" aria-labelledby="articleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="articleModalLabel">Article Title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="articleModalBody">
+          Full article content goes here.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Gardening Tips | Designed with 🌿 using Bootstrap</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const articles = {
+        1: {
+          title: "How to Start a Vegetable Garden",
+          content:
+            "Starting a vegetable garden is both rewarding and fun! Begin by selecting a sunny location with well-drained soil. Prepare the soil by adding compost and organic matter to enrich it. Choose vegetables suited to your climate and season—tomatoes, lettuce, carrots, and peppers are great for beginners. Water regularly, mulch to retain moisture, and watch your garden flourish!"
+        },
+        2: {
+          title: "Tips for Growing Herbs",
+          content:
+            "Growing herbs is easy and perfect for small spaces. Use pots with drainage holes and place them in a sunny spot. Water herbs moderately—too much water can cause root rot. Regularly trim the leaves to encourage new growth. Some easy-to-grow herbs include basil, parsley, mint, and rosemary. Fresh herbs add both flavor and fragrance to your meals and home."
+        },
+        3: {
+          title: "Organic Pest Control",
+          content:
+            "Protecting your plants organically helps preserve the environment. Introduce beneficial insects like ladybugs to control aphids. Use neem oil or homemade sprays with garlic or soap to deter pests naturally. Maintain healthy soil and proper spacing between plants to prevent infestations. A balanced garden ecosystem is the best defense against pests!"
+        }
+      };
+
+      const modal = new bootstrap.Modal(document.getElementById("articleModal"));
+      const modalTitle = document.getElementById("articleModalLabel");
+      const modalBody = document.getElementById("articleModalBody");
+
+      document.querySelectorAll(".btn-read").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const articleId = btn.getAttribute("data-article");
+          const article = articles[articleId];
+          if (article) {
+            modalTitle.textContent = article.title;
+            modalBody.textContent = article.content;
+            modal.show();
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

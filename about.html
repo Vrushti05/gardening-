@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | Gardening Tips</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body { background-color: #e9f7ef; }
+    header { background-color: #2e7d32; }
+    header .nav-link { color: #fff !important; }
+    .hero {
+      background: linear-gradient(rgba(46,125,50,0.8), rgba(46,125,50,0.8)),
+                  url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1000&q=60') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 80px 0;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .content-section {
+      padding: 60px 0;
+    }
+    .content-section h2 {
+      color: #2e7d32;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .content-section p {
+      color: #444;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+    .team-section {
+      background-color: #f5fcf7;
+      padding: 60px 0;
+    }
+    .team-section h2 {
+      color: #2e7d32;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    .card img {
+      border-radius: 10px 10px 0 0;
+      height: 220px;
+      object-fit: cover;
+    }
+    .card-body h5 {
+      color: #2e7d32;
+      font-weight: 600;
+    }
+    footer {
+      background-color: #2e7d32;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="text-white fw-bold fs-4">LOGO</div>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>About Us</h1>
+      <p class="lead mt-3">Nurturing your love for gardening, one plant at a time.</p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="content-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=60" alt="About Gardening Tips" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+          <h2>Who We Are</h2>
+          <p>At <strong>Gardening Tips</strong>, we believe that gardening is more than a hobby — it’s a way to connect with nature, promote sustainability, and bring beauty into everyday life. Our mission is to empower people with practical knowledge, creative ideas, and eco-friendly practices to help their gardens thrive.</p>
+          <p>Whether you’re a beginner planting your first seeds or an experienced gardener cultivating an urban oasis, we’re here to guide you with expert advice, hands-on tutorials, and inspiration drawn from nature itself.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="container">
+      <h2>Meet Our Team</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card" data-member="Alex Green">
+            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=800&q=60" alt="Team Member">
+            <div class="card-body text-center">
+              <h5>Alex Green</h5>
+              <p>Founder & Lead Gardener</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card" data-member="Sophia Bloom">
+            <img src="https://images.unsplash.com/photo-1603415526960-f7e0328f8d66?auto=format&fit=crop&w=800&q=60" alt="Team Member">
+            <div class="card-body text-center">
+              <h5>Sophia Bloom</h5>
+              <p>Herb Specialist</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card" data-member="Liam Woods">
+            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=800&q=60" alt="Team Member">
+            <div class="card-body text-center">
+              <h5>Liam Woods</h5>
+              <p>Eco Consultant</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="teamModal" tabindex="-1" aria-labelledby="teamModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="teamModalLabel">Team Member</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="teamDescription">Details about the team member will appear here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Gardening Tips | Designed with 🌿 using Bootstrap</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".card[data-member]");
+      const modal = new bootstrap.Modal(document.getElementById("teamModal"));
+      const modalTitle = document.getElementById("teamModalLabel");
+      const modalDesc = document.getElementById("teamDescription");
+
+      const teamInfo = {
+        "Alex Green": "Alex founded Gardening Tips to inspire people to grow their own green spaces. With over 15 years of experience, he specializes in landscape design and sustainable gardening.",
+        "Sophia Bloom": "Sophia is our herb specialist who believes that every garden should be both beautiful and useful. She focuses on organic herb cultivation and natural remedies.",
+        "Liam Woods": "Liam is an eco-consultant passionate about environmental conservation. He helps gardeners adopt eco-friendly and water-efficient practices."
+      };
+
+      cards.forEach(card => {
+        card.addEventListener("click", () => {
+          const memberName = card.dataset.member;
+          modalTitle.textContent = memberName;
+          modalDesc.textContent = teamInfo[memberName] || "This team member plays a vital role in our gardening community.";
+          modal.show();
+        });
+      });
+    });
+  </script>
+</body>
+</html>
